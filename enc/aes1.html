@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Encryptor by kiran.s </title>
+<style type="text/css">
+   body { background: #C63D0F !important; } 
+</style>
+</head>
+
+<script src="rollups/aes.js"></script>
+
+<script type="text/javascript">
+    function encrypto()
+    {
+        var stringa=document.getElementById("str").value;
+        var passwda=document.getElementById("pass").value;
+        var encrypteda = CryptoJS.AES.encrypt(stringa, passwda);
+        alert("encrypted string is : "+encrypteda);
+    }
+    function decrypto()
+    {
+        var stringb=document.getElementById("strb").value;
+        var passwdb=document.getElementById("passb").value;
+        var decryptedb = CryptoJS.AES.decrypt(stringb, passwdb);
+        var decryptedbs=decryptedb.toString(CryptoJS.enc.Utf8);
+        alert("decrypted string is : "+decryptedbs);
+    }
+</script>
+
+<body>
+<div class="container-fluid" style="background-color: #f98b66;"> <br/>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:20px;">Encryptor Service by Kiran s</p></center></b>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:13px;">Using CryptoJS</p></center></b><br/>
+</div>
+
+<br/><br/>
+
+
+<!--encryptor-->
+<div style="background-color: #f98b66;">
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:30px;">Encryptor</p></center></b>
+</div>
+
+<br/>
+
+<form action="javascript:encrypto();">
+   <center>
+       <input  id="str" type="text" placeholder="Enter a string to encrypt"/><br/>
+       <input  id="pass" type="password" placeholder="Enter password"/><br/>
+       <input type="submit" value="Go"/>
+   </center>
+</form>
+
+<br/>
+
+
+<!-- decryptor-->
+<div style="background-color: #f98b66;">
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:30px;">decryptor</p></center></b>
+</div>
+
+<br/>
+
+<form action="javascript:decrypto();">
+   <center>
+       <input  id="strb" type="text" placeholder="Enter the string to decrypt"/><br/>
+       <input  id="passb" type="password" placeholder="Enter password"/><br/>
+       <input type="submit" value="Go"/>
+   </center>
+</form>
+
+<br/>
+
+<div style="background-color: #f98b66;"> <br/>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:30px;">Thank you!</p></center></b><br/>
+</div>
+
+</body>
+</html>
