@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Encryptor by kiran.s </title>
+<style type="text/css">
+   body { background: #C63D0F !important; } 
+</style>
+</head>
+
+<script type="text/javascript">
+    function selector()
+    {
+        var e = document.getElementById("slct");
+        var soption = e.options[e.selectedIndex].value;
+        if(soption=="shit")
+            {
+                alert("Select any method");
+            }
+        else if(soption=="aes1")
+            {
+                 window.location="aes1.html"
+            }
+         else if(soption=="md51")
+            {
+                 window.location="md51.html"
+            }
+         else if(soption=="sha11")
+            {
+                 window.location="sha11.html"
+            }
+         else if(soption=="sha31")
+            {
+                 window.location="sha31.html"
+            }
+         else if(soption=="trdes1")
+            {
+                 window.location="trdes1.html"
+            }
+    }
+</script>
+
+<body>
+<div class="container-fluid" style="background-color: #f98b66;"> <br/>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:20px;">Encryptor Service by Kiran s</p></center></b>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:13px;">Using CryptoJS</p></center></b><br/>
+</div>
+<br/><br/><br/>
+ <form name="selector" action="javascript:selector();">
+  <center>
+   <select style="font-size: 16px;height: 34px;width: 268px;border: 1px solid #ccc;color: white;background-color: #000;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 8px;" id="slct">
+    <option value="shit">Select encryption method</option>
+    <option value="aes1">AES</option>
+    <option value="md51">MD5</option>
+    <option value="sha11">SHA1</option>
+    <option value="sha31">SHA3</option>
+    <option value="trdes1">TRIPLE DES</option>
+   </select>
+   <br/>
+   <input type="submit" value="go"/> <br/> <br/> <br/> <br/>
+   </form>
+   </center>
+<div style="background-color: #f98b66;"> <br/>
+    <b><center><p style="color:white;font-family: Courier, Times, serif;font-size:30px;">Thank you!</p></center></b><br/>
+</div>
+</body>
+</html>
+
